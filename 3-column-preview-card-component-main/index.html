@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html{
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    body{
+      min-height: 100vh;
+    }
+
+    .container{
+      display: flex;
+      align-items: center;
+      margin: 4rem auto;
+      width: 60vw;
+    }
+
+    .sedans-card{
+      background: peru;
+      flex: 1 1 50%;
+      min-width: 20ch;
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .suvs-card{
+      background: steelblue;
+      min-width: 15ch;
+      flex: 1 1 50%;
+    }
+
+    .luxury-card{
+      background: darkcyan;
+      flex: 1 1 50%;
+      min-width: 20ch;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .cards p{
+      margin: 2rem;
+      font-size: 1.2rem;
+      color: #fff;
+      line-height: 2rem;
+    }
+
+    .cards > *{
+      flex-wrap: wrap;
+      flex-basis: 100%;
+    }
+    
+    .sedans,
+    .suvs,
+    .luxury{
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 2rem;
+      color: #fff;
+      text-align: left;
+      margin-left: 2rem;
+      text-transform: uppercase;
+    }
+
+    img{
+      margin: 2rem 0 2rem 2rem;
+    }
+
+    button{
+      background: #fff;
+      outline: none;
+      border: none;
+      height: 2.5rem;
+      width: 8rem;
+      border-radius: 1.5rem;
+      margin: 4rem 0 3rem 2rem;
+      transition: 0.5s ease-in;
+    }
+
+    .a1{
+      color: peru;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .a2{
+      color: steelblue;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .a3{
+      color: darkcyan;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (max-width: 1024px) {
+      .container {
+        display: block;
+  }
+
+  .sedans-card{
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .luxury-card{
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sedans-card cards">
+      <img src="images/icon-sedans.svg" alt="">
+      <h2 class="sedans">
+        Sedans
+      </h2>
+      <p class="sedans-txt">
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+        or on your next road trip.
+      </p>
+      <button><a class="a1" href="#">Learn More</a></button>
+    </div>
+
+    <div class="suvs-card cards">
+      <img src="images/icon-suvs.svg" alt="">
+      <h2 class="suvs">
+        SUVs
+      </h2>
+      <p class="suvs-txt">
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+        and off-road adventures.
+      </p>
+      <button><a class="a2" href="#">Learn More</a></button>
+    </div>
+
+    <div class="luxury-card cards">
+      <img src="images/icon-luxury.svg" alt="">
+      <h2 class="luxury">
+        Luxury
+      </h2>
+      <p class="luxury-txt">
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+        rental and arrive in style.
+      </p>
+      <button><a class="a3" href="#">Learn More</a></button>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Charles Freeman</a>.
+  </div>
+</body>
+</html>
